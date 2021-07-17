@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Weather App</title>
+</head>
+{{!-- <style>
+    body {
+        background-color: lightgray;
+    }
+    button {
+        padding: 10px;
+    }
+</style> --}}
+<body>
+    <div class="container">
+        <form action="/weather" method="post">
+            <p>{{ weatherText }}</p>
+            <label for="cityName">City Name</label>
+            <input type="text" name="CityName">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
