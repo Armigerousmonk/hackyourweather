@@ -24,7 +24,7 @@ app.get('/', function (req, res) {
 app.post('/weather', function (req, res) {
     const cityName = req.body.CityName;
     // const API_KEY = require('./sources/keys.json').API_KEY;
-    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${process.env.API_KEY}`;
+    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`;
 
     // Make a request for a user with a given ID
     axios.get(URL)
