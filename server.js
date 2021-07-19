@@ -20,6 +20,7 @@ app.get('/', function (req, res) {
 });
 
 
+
 app.post('/weather', function (req, res) {
     const cityName = req.body.CityName;
     // const API_KEY = require('./sources/keys.json').API_KEY;
