@@ -1,6 +1,9 @@
 const express = require('express');
 const exphbs  = require('express-handlebars');
 const axios = require('axios');
+require('dotenv').config();
+
+
 
 const app = express();
 const port = process.env.PORT || 3000
@@ -16,10 +19,11 @@ app.get('/', function (req, res) {
     res.render('index');
 });
 
+
 app.post('/weather', function (req, res) {
     const cityName = req.body.CityName;
     // const API_KEY = require('./sources/keys.json').API_KEY;
-    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${require('./sources/keys.json').API_KEY}`;
+    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${process.env.API_KEY}`;
 
     // Make a request for a user with a given ID
     axios.get(URL)
